@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 client = MongoClient(
-    ""
+    "***REMOVED***"
 )
 db = client.bmun
 user_collection = db['users']
