@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import bcrypt
 
 client = MongoClient(
-    "***REMOVED***"
+    ""
 )
 db = client.bmun
 user_collection = db['users']
