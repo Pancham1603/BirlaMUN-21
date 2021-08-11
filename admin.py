@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 client = MongoClient(
-    ""
+    "mongodb+srv://admin:admin@pancham.vxuje.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 )
 db = client.bmun
 user_collection = db['users']

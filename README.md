@@ -3,8 +3,7 @@
 ![Flask](https://img.shields.io/badge/Flask-2.0.1-blue)
 
 Delegate management and default zoom renaming and breakout rooms arrangement for Birla MUN'21 at Birla Vidya Niketan, New Delhi
-
-# Installation
+### Installation
 
 In case you want to run a development server on your local machine, then follow the following steps.
 
@@ -58,7 +57,7 @@ python3 main.py # For unix
 python main.py # For Windows
 ```
 
-# Screenshots
+## Screenshots
 
 ![Client 1](static/images/bmun1.png)
 Home
@@ -76,4 +75,4 @@ Scheduling a Meeting
 Participant management
 
 ![Admin 3](static/images/admin2.png)
-Meeting Management
+ MeetingManagement
