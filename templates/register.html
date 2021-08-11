@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+
+  <meta name="robots" content="noindex">
+<title>Register | BMUN 2021</title>
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="/static/css/register.css" type="text/css">
+<link rel="icon" type="image/png" href="/static/images/Bmunlogo.png"/>
+</head>
+
+<body>
+  <div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+            <div class="app-title">
+            <span><a href="/" class="title">Birla</a></span>
+            <span><a href="/" class="title">Model United Nations'21</a></span>
+
+          </div>
+          <div class="screen-body-item-left">
+            <form class="app-form" method="POST" action="/login">
+            <button type="submit" class="app-form-button-left">LOGIN</button>
+        </form>
+          </div>
+          <div class="app-contact">MADE WITH ❤ BY <a class="mail" href="https://github.com/pancham1603" target="_blank">PANCHAM AGARWAL</a> </div>
+        </div>
+        <div class="screen-body-item">
+          <form class="app-form" method="POST" action="/register/verify">
+            <div class="app-form-group">
+              <input class="app-form-control" name="name" placeholder="NAME" required>
+            </div>
+            <div class="app-form-group">
+              <input class="app-form-control" name="email" type="email" placeholder="EMAIL" required>
+            </div>
+            <div class="app-form-group">
+              <input class="app-form-control" name="school" type="text" placeholder="SCHOOL" required>
+            </div>
+            <div class="app-form-group message">
+                <select class="app-form-control" name="committee" placeholder="COMMITTEE" required>
+                    <option value="Committee" selected>COMMITTEE</option>
+                    <option value="committee1">Committee 1</option>
+                    <option value="committee2">Committee 2</option>
+                    <option value="committee3">Committee 3</option>
+                    <option value="committee4">Committee 4</option>
+                    <option value="committee5">Committee 5</option>
+                    <option value="committee6">Committee 6</option>
+                    <option value="committee7">Committee 7</option>
+                    <option value="committee8">Committee 8</option>
+                    <option value="committee9">Committee 9</option>
+                </select>
+            </div>
+          <div class="app-form-group">
+              <input class="app-form-control" name="password" type="password" placeholder="PASSWORD" required>
+            </div>
+            <div class="app-form-group buttons">
+              <button type="submit" class="app-form-button">REGISTER</button>
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <h4 class="{{ category }}">{{ message }}</h4>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script  src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-00245fc6-a69f-7fef-45f8-9ca6a7d058a6" crossorigin></script>
+</body>
+
+</html><!-- I have not written the html code, found it on codepen.io -->

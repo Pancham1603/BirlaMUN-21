@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Participants | BMUN 2021</title>
+    <link rel="icon" type="image/png" href="/static/images/Bmunlogo.png"/>
+</head>
+<body>
+<a href="/">Home</a> <br><br>
+<table class="table">
+    <tr class="table__header">
+          <th>#</th>
+          <th>Name</th>
+          <th>School</th>
+          <th>Role</th>
+          <th>Committee</th>
+          <th>Allotment</th>
+    </tr>
+    <tr>
+  {% for user in participants %}
+    <tr>
+      <th>{{loop.index}}</th>
+      <th>{{user['name']}}</th>
+        <th>{{ user['school'] }}</th>
+      <th>{{user['role']}}</th>
+      <th>{{user['committee']}}</th>
+    <th>{{ user['allotment'] }}</th>
+        <th><a href="/u/{{user['_id']}}">View</a></th>
+        {% if admin %}
+        <th><a href="/u/{{user['_id']}}/edit">Edit</a></th>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+<style>
+    table {
+        border: 1px solid #000000;
+    }
+    th {
+        border: 1px solid #000000;
+        padding: 10px;
+    }
+</style>
+
+</body>
+</html>

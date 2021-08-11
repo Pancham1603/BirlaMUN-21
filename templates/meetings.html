@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Meetings | BMUN 2021</title>
+    <link rel="icon" type="image/png" href="/static/images/Bmunlogo.png"/>
+</head>
+<body>
+<a href="/admin/meetings/add">New Meeting</a> <a href="/">Home</a><br><br>
+<table class="table">
+    <tr class="table__header">
+          <th>#</th>
+          <th>Topic</th>
+          <th>Time</th>
+    </tr>
+    <tr>
+  {% for meeting in meetings %}
+    <tr>
+      <th>{{loop.index}}</th>
+      <th>{{meeting['topic']}}</th>
+        <th>{{ meeting['time'] }}</th>
+        <th><a href="/admin/meetings/{{meeting['meeting_id']}}/edit">Edit</a></th>
+        <th><a href="/admin/meetings/{{meeting['meeting_id']}}/delete">Delete</a></th>
+    </tr>
+    {% endfor %}
+</table>
+<style>
+    table {
+        border: 1px solid #000000;
+    }
+    th {
+        border: 1px solid #000000;
+        padding: 10px;
+    }
+</style>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <h4 class="{{ category }}">{{ message }}</h4>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+</body>
+</html>

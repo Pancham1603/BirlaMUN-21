@@ -1,0 +1,314 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to right, #ffdd00 0%, #ffdd00 100%);
+  font-size: 12px;
+}
+
+body, button, input, select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #666666;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ff0000;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #1db954;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-body-item-left {
+  flex: 1;
+  padding-right: 50px;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+.screen-body-item-left.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ff7600;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70px;
+  height: 4px;
+  background: #ff7600;
+}
+
+.rate-limit-link {
+    color: black;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 11px;
+  color: #afafaf;
+  width: max-content;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: auto;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #b4b3b3;
+  color: #b4b3b3;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::-moz-placeholder {
+  color: #b4b3b3;
+}
+
+.app-form-control:-ms-input-placeholder {
+  color: #b4b3b3;
+}
+
+.app-form-control::placeholder {
+  color: #b4b3b3;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-control-left {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #898989;
+  color: #899889;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control-left::-moz-placeholder {
+  color: #898989;
+}
+
+.app-form-control-left:-ms-input-placeholder {
+  color: #898989;
+}
+
+.app-form-control-left::placeholder {
+  color: #898989;
+}
+
+.app-form-control-left:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #ff7900;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button-left {
+  font-size: 20px;
+  cursor: pointer;
+  border: 3px solid #ff7900;
+  background: none;
+  color: #ff7900;
+  padding: 8px 28px;
+  margin-bottom: 20px
+}
+
+.app-form-button-left:hover {
+  background: #ff7700;
+  color: white;
+}
+
+.app-form-button:hover {
+  color: #d76d01;
+}
+
+
+.dev_contact {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+.mail {
+  color: #afafaf;
+}
+
+.success {
+  color:#66ff00;
+}
+
+.error {
+  color:red;
+}
+
+.title {
+  text-decoration:none;
+  color: #ee7f1b;
+}
+.rate-notice {
+  text-align:center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}

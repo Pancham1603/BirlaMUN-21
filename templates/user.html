@@ -1,0 +1,10 @@
+Name: {{ user['name'] }}<br>
+Institution: {{ user['school'] }}<br>
+Access: {{ user['role'] }}<br>
+Committee: {{ user['committee'] }}<br>
+Allotment: {{ user['allotment'] }}<br>
+
+<a href="/">Home</a>
+{% if admin %}
+<a href="/u/{{ user['_id'] }}/edit">Edit</a>
+{% endif %}

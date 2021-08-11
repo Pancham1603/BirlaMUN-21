@@ -1,0 +1,16 @@
+<form action="/admin/meetings/{{ meeting['_id'] }}/edit/submit" method="post">
+    <div class="app-form-group">
+              <input class="app-form-control" name="topic" placeholder="Topic" value="{{ meeting['topic'] }}" required>
+            </div><br>
+            <div class="app-form-group">
+              <input class="app-form-control" name="meeting_id" type="text" placeholder="Meeting ID" value="{{  meeting['_id'] }}" required>
+            </div><br>
+             <div class="app-form-group">
+              <input class="app-form-control" name="meeting_url" type="url" placeholder="Meeting URL" value="{{  meeting['url'] }}" required>
+            </div>
+            <br>
+     <div class="app-form-group">
+              <input class="app-form-control" name="time" type="text" placeholder="Time" value="{{  meeting['time'] }}" required>
+            </div><br>
+    <input type="submit">
+</form>

@@ -1,0 +1,19 @@
+<form action="/u/{{ user['_id'] }}/edit/submit" method="post">
+    <div class="app-form-group">
+              <input class="app-form-control" name="name" placeholder="Name" value="{{ user['name'] }}" required>
+            </div><br>
+            <div class="app-form-group">
+              <input class="app-form-control" name="school" type="text" placeholder="Institution" value="{{  user['school'] }}" required>
+            </div><br>
+             <div class="app-form-group">
+              <input class="app-form-control" name="role" type="text" placeholder="Role" value="{{  user['role'] }}" required>
+            </div>
+            <br>
+     <div class="app-form-group">
+              <input class="app-form-control" name="committee" type="text" placeholder="Committee" value="{{  user['committee'] }}" required>
+            </div><br>
+          <div class="app-form-group">
+              <input class="app-form-control" name="allotment" type="text" placeholder="Allotment" value="{{ user['allotment'] }}" required>
+            </div><br>
+    <input type="submit">
+</form>
