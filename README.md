@@ -59,20 +59,20 @@ python main.py # For Windows
 
 ## Screenshots
 
-![Client 1](static/images/bmun1.png)
+![Client 1](static/images/bmun1.PNG)
 Home
 
-![Client 2](static/images/bmun2.png)
+![Client 2](static/images/bmun2.PNG)
 Registration
 
-![Client 3](static/images/bmun3.png)
+![Client 3](static/images/bmun3.PNG)
 Dashboard
 
-![Admin 1](static/images/bmun4.png)
+![Admin 1](static/images/bmun4.PNG)
 Scheduling a Meeting
 
-![Admin 2](static/images/admin1.png)
+![Admin 2](static/images/admin1.PNG)
 Participant management
 
-![Admin 3](static/images/admin2.png)
+![Admin 3](static/images/admin2.PNG)
  MeetingManagement
