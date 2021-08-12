@@ -1,3 +1,9 @@
+<html>
+<head>
+    <title>Edit {{ meeting['topic'] }} | BMUN 2021</title>
+    <link rel="icon" type="image/png" href="/static/images/Bmunlogo.png"/>
+</head>
+<body>
 <form action="/admin/meetings/{{ meeting['_id'] }}/edit/submit" method="post">
     <div class="app-form-group">
               <input class="app-form-control" name="topic" placeholder="Topic" value="{{ meeting['topic'] }}" required>
@@ -14,3 +20,5 @@
             </div><br>
     <input type="submit">
 </form>
+</body>
+</html>

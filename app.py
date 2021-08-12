@@ -75,7 +75,8 @@ def dashboard():
     try:
         if session['user'] and session['login']:
             user = fetch_user(session['user'])
-            return render_template('dashboard.html', user=user, meetings = fetch_meetings(), admin=admin_check(session['user']))
+            return render_template('dashboard.html', user=user, meetings=fetch_meetings(),
+                                   admin=admin_check(session['user']))
         else:
             return redirect('/login')
     except KeyError:
@@ -84,11 +85,12 @@ def dashboard():
         return redirect('/login')
 
 
-@app.route('/logout', methods=['GET','POST'])
+@app.route('/logout', methods=['GET', 'POST'])
 def logout():
     session['user'] = None
     session['login'] = False
     return redirect('/login')
+
 
 @app.route('/participants', methods=['GET', 'POST'])
 def participants():
@@ -148,7 +150,7 @@ def edit_user(id):
         return redirect('/login')
 
 
-@app.route('/u/<id>/edit/submit', methods=['GET','POST'])
+@app.route('/u/<id>/edit/submit', methods=['GET', 'POST'])
 def submit_edit(id):
     if request.method == 'POST':
         flash(update_user(id, request.form))
@@ -243,7 +245,7 @@ def edit_meeting(meeting_id):
         return redirect('/login')
 
 
-@app.route('/admin/meetings/<meeting_id>/edit/submit', methods=['GET','POST'])
+@app.route('/admin/meetings/<meeting_id>/edit/submit', methods=['GET', 'POST'])
 def edit_meeting_submit(meeting_id):
     try:
         if session['user'] and session['login']:

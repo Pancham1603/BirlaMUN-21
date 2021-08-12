@@ -1,3 +1,9 @@
+<html>
+<head>
+    <title>{{ user['name'] }} | BMUN 2021</title>
+    <link rel="icon" type="image/png" href="/static/images/Bmunlogo.png"/>
+</head>
+<body>
 Name: {{ user['name'] }}<br>
 Institution: {{ user['school'] }}<br>
 Access: {{ user['role'] }}<br>
@@ -8,3 +14,5 @@ Allotment: {{ user['allotment'] }}<br>
 {% if admin %}
 <a href="/u/{{ user['_id'] }}/edit">Edit</a>
 {% endif %}
+</body>
+</html>
