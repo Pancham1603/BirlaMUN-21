@@ -2,7 +2,7 @@ from flask import session
 from pymongo import MongoClient
 import bcrypt
 
-client = MongoClient(r"***REMOVED***")
+client = MongoClient(r"")
 db = client.bmun
 user_collection = db['users']
 

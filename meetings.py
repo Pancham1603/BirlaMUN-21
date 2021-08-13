@@ -1,7 +1,7 @@
 import pymongo.errors
 from pymongo import MongoClient
 
-client = MongoClient(r"***REMOVED***")
+client = MongoClient(r"")
 db = client.bmun
 user_collection = db['users']
 meeting_collection = db['meetings']
