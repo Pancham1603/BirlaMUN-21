@@ -1,8 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient(
-    ""
-)
+client = MongoClient(r"***REMOVED***")
 db = client.bmun
 user_collection = db['users']
 
@@ -36,8 +34,8 @@ def user_list():
 
 def update_user(email, data):
     user_collection.update_one(
-        {'_id':email.lower()},
-        {'$set':{
+        {'_id': email.lower()},
+        {'$set': {
             'name': data['name'],
             'school': data['school'],
             'role': data['role'],
@@ -49,6 +47,6 @@ def update_user(email, data):
 
 
 def delete_user(email):
-    name = user_collection.find_one({'_id':email.lower()})['name']
-    user_collection.delete_one({'_id':email.lower()})
+    name = user_collection.find_one({'_id': email.lower()})['name']
+    user_collection.delete_one({'_id': email.lower()})
     return f'Deleted user {name} successfully'

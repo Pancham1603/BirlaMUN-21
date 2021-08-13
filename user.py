@@ -2,9 +2,7 @@ from flask import session
 from pymongo import MongoClient
 import bcrypt
 
-client = MongoClient(
-    ""
-)
+client = MongoClient(r"***REMOVED***")
 db = client.bmun
 user_collection = db['users']
 
@@ -29,8 +27,8 @@ def add_new_user(form_data):
             'name': name.title(),
             'school': school,
             'committee': committee,
-            'allotment':'TBD',
-            'role':'delegate',
+            'allotment': 'TBD',
+            'role': 'delegate',
             'password': hashed_password
         })
         return 'Registered user successfully'
@@ -41,11 +39,9 @@ def login_user(form_data):
     email = form_data['email']
     password = form_data['password']
 
-
     user = user_collection.find_one({
         '_id': email.lower(),
     })
-    print(user)
     if user:
         if bcrypt.checkpw(password.encode(), user['password']):
             session['login'] = True
@@ -60,13 +56,10 @@ def login_user(form_data):
 def fetch_user(email):
     user = user_collection.find_one({'_id': email.lower()})
     return {
-        '_id':user['_id'],
+        '_id': user['_id'],
         'name': user['name'],
         'school': user['school'],
         'role': user['role'],
         'committee': user['committee'],
         'allotment': user['allotment']
     }
-
-
-
