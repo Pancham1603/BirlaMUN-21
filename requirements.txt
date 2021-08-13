@@ -4,7 +4,6 @@ cffi==1.14.6
 click
 dnspython==2.1.0
 Flask
-gunicorn-20.1.0
 importlib-metadata
 itsdangerous
 Jinja2
@@ -15,4 +14,5 @@ six==1.16.0
 typing-extensions
 Werkzeug
 wincertstore==0.2
+gunicorn
 zipp
